@@ -1,9 +1,14 @@
 namespace Contacts.Maui.Views;
 
+using Contacts.Maui.Models;
+using Contact = Contacts.Maui.Models.Contact;
+
 [QueryProperty(nameof(ContactId),"Id")]
 
 public partial class EditContactPage : ContentPage
 {
+    private Contact contact;
+
 	public EditContactPage()
 	{
 		InitializeComponent();
@@ -18,7 +23,8 @@ public partial class EditContactPage : ContentPage
     {
         set
         {
-
+            contact = ContactRepository.GetContactById(int.Parse(value));
+            lblName.Text = contact.Name;
         }
     }
 }
