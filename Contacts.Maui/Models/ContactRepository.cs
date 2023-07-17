@@ -10,9 +10,9 @@ namespace Contacts.Maui.Models
     {
         public static List<Contact> _contacts = new List<Contact>()
         {
-            new Contact {Name="Aadi Sharma", Email="asharma@mitre.org"},
-            new Contact {Name="Frank", Email="frank@mitre.org"},
-            new Contact {Name="Joe Biden", Email="jbiden@secretservice.org"},
+            new Contact {ContactId = 1, Name="Aadi Sharma", Email="asharma@mitre.org"},
+            new Contact {ContactId = 2, Name="Frank", Email="frank@mitre.org"},
+            new Contact {ContactId = 3, Name="Joe Biden", Email="jbiden@secretservice.org"},
 
         };
 
