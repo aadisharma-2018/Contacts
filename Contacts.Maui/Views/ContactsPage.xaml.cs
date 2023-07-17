@@ -16,11 +16,11 @@ public partial class ContactsPage : ContentPage
 
 	
 
-    private void listContacts_ItemSelected(object sender, SelectedItemChangedEventArgs e)
+    private async void listContacts_ItemSelected(object sender, SelectedItemChangedEventArgs e)
     {
 		if (listContacts.SelectedItem != null)
 		{
-            Shell.Current.GoToAsync(nameof(EditContactPage));
+            await Shell.Current.GoToAsync($"{nameof(EditContactPage)}?Id={((Contact)listContacts.SelectedItem).ContactId}");
 
 
         }
