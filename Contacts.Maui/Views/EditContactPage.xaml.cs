@@ -1,13 +1,15 @@
-namespace Contacts.Maui.Views;
-
 using Contacts.Maui.Models;
 using Contact = Contacts.Maui.Models.Contact;
+
+namespace Contacts.Maui.Views;
 
 [QueryProperty(nameof(ContactId),"Id")]
 
 public partial class EditContactPage : ContentPage
 {
+
     private Contact contact;
+    
 
 	public EditContactPage()
 	{
@@ -35,8 +37,23 @@ public partial class EditContactPage : ContentPage
         }
     }
 
-    private void btnUpdate_Clicked(System.Object sender, System.EventArgs e)
+    private void btnUpdate_Clicked(object sender, EventArgs e)
     {
+        if (nameValidator.IsNotValid)
+        {
+            DisplayAlert("Error", "Name is required.", "OK");
+            return; 
+        }
+
+        if (emailValidator.IsNotValid)
+        {
+            foreach(var error in emailValidator.Errors)
+            {
+                DisplayAlert("Error", error.ToString(), "OK");
+            }
+            return;
+        }
+
         contact.Name = entryName.Text;
         contact.Email = entryEmail.Text;
         contact.Phone = entryPhone.Text;
