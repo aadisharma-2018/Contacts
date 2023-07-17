@@ -74,4 +74,10 @@
 	  </MauiXaml>
 	</ItemGroup>
 
+	<ItemGroup>
+	  <None Remove="Views\Controls\" />
+	</ItemGroup>
+	<ItemGroup>
+	  <Folder Include="Views\Controls\" />
+	</ItemGroup>
 </Project>
