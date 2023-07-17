@@ -1,4 +1,5 @@
 namespace Contacts.Maui.Views;
+using Contacts.Maui.Models;
 
 public partial class AddContactPage : ContentPage
 {
@@ -6,11 +7,6 @@ public partial class AddContactPage : ContentPage
 	{
 		InitializeComponent();
 	}
-
-    private void btnCancel_Clicked(object sender, EventArgs e)
-    {
-		Shell.Current.GoToAsync("..");
-    }
 
     private void contactCtrl_OnUpdate(System.Object sender, System.EventArgs e)
     {
