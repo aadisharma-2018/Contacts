@@ -4,13 +4,24 @@
              x:Class="Contacts.Maui.Views.ContactsPage"
              Title="Contacts">
     
-    <VerticalStackLayout BackgroundColor="Blue" Spacing="5">
-        <Label 
-            BackgroundColor="Transparent"
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-        <Button x:Name="btnEditContact" Clicked="btnEditContact_Clicked" Text="Edit Contact" />
-        <Button x:Name="btnAddContact" Clicked="btnAddContact_Clicked" Text="Add Contact" />
-    </VerticalStackLayout>
+    <ListView x:Name="listContacts" 
+              BackgroundColor="Transparent"
+              ItemSelected="listContacts_ItemSelected"
+              ItemTapped="listContacts_ItemTapped"
+              >
+        
+        
+
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <TextCell Text="{Binding Name}"
+                          Detail="{Binding Email}"> 
+                    
+                </TextCell>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+        
+        
+    </ListView>
+    
 </ContentPage>

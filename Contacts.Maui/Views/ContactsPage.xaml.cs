@@ -5,15 +5,41 @@ public partial class ContactsPage : ContentPage
 	public ContactsPage()
 	{
 		InitializeComponent();
+
+		List<Contact> contacts = new List<Contact>()
+		{
+			new Contact {Name="Aadi Sharma", Email="asharma@mitre.org"},
+			new Contact {Name="Frank", Email="frank@mitre.org"},
+			new Contact {Name="Joe Biden", Email="jbiden@secretservice.org"},
+
+		};
+
+		listContacts.ItemsSource = contacts;
 	}
 
-    private void btnAddContact_Clicked(object sender, EventArgs e)
+	public class Contact
+	{
+		public string Name { get; set; }
+		public string Email { get; set; }
+
+	}
+
+    private void listContacts_ItemSelected(object sender, SelectedItemChangedEventArgs e)
     {
-        Shell.Current.GoToAsync(nameof(AddContactPage));
+		if (listContacts.SelectedItem != null)
+		{
+            Shell.Current.GoToAsync(nameof(EditContactPage));
+
+
+        }
+
+
     }
 
-    private void btnEditContact_Clicked(object sender, EventArgs e)
+    private void listContacts_ItemTapped(object sender, ItemTappedEventArgs e)
     {
-        Shell.Current.GoToAsync(nameof(EditContactPage));
+
+        listContacts.SelectedItem = null;
+
     }
 }
