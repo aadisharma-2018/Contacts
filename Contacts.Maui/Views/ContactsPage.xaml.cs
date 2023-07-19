@@ -59,6 +59,8 @@ public partial class ContactsPage : ContentPage
     {
         var contacts = new ObservableCollection<Contact>(ContactRepository.GetContacts());
 
+
+
         listContacts.ItemsSource = contacts;
     }
 
