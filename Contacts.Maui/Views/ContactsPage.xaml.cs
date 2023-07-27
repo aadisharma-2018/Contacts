@@ -76,5 +76,8 @@ public partial class ContactsPage : ContentPage
         listContacts.ItemsSource = contacts;
     }
 
-    
+    private void btnTest_Clicked(object sender, EventArgs e)
+    {
+        Shell.Current.GoToAsync(nameof(TestPage1));
+    }
 }
