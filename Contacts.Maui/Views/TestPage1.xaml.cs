@@ -5,6 +5,8 @@ namespace Contacts.Maui.Views;
 public partial class TestPage1 : ContentPage
 {
 	private ContactViewModel viewModel;
+
+	/*
 	public TestPage1()
 	{
 		InitializeComponent();
@@ -18,5 +20,6 @@ public partial class TestPage1 : ContentPage
         base.OnAppearing();
 
 		this.viewModel.LoadContact(1);
-    }
+    } 
+	*/
 }
