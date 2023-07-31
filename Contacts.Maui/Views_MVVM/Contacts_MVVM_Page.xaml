@@ -5,7 +5,7 @@
              xmlns:m="clr-namespace:Contacts.CoreBusines;assembly=Contacts.CoreBusines"
              x:DataType="vm:ContactsViewModel"
              x:Class="Contacts.Maui.Views_MVVM.Contacts_MVVM_Page"
-             Title="Contacts_MVVM_Page">
+             Title="Contacts App">
     <Grid
         Padding="5"
         RowDefinitions="50, *, 50"
