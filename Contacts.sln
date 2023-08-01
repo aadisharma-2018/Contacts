@@ -15,6 +15,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Contacts.Plugins.DataStore.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Contacts.Plugins.DataStore.SQLLite", "Plugins\Contacts.Plugins.DataStore.SQLLite\Contacts.Plugins.DataStore.SQLLite.csproj", "{89CBFD8D-F82C-407A-BF40-D23BF162CF60}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Contacts.WebApi", "Contacts.WebApi\Contacts.WebApi.csproj", "{DFEF449A-F7B4-413B-809E-BDC3A2230043}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -43,6 +45,10 @@ Global
 		{89CBFD8D-F82C-407A-BF40-D23BF162CF60}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{89CBFD8D-F82C-407A-BF40-D23BF162CF60}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{89CBFD8D-F82C-407A-BF40-D23BF162CF60}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DFEF449A-F7B4-413B-809E-BDC3A2230043}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DFEF449A-F7B4-413B-809E-BDC3A2230043}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DFEF449A-F7B4-413B-809E-BDC3A2230043}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DFEF449A-F7B4-413B-809E-BDC3A2230043}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
